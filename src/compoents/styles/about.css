@@ -1,0 +1,49 @@
+*{
+    background-color: black;
+}
+.about{
+    font-size: 60px;
+    font-weight: 400;
+    color: white;
+    margin-top: 9rem;
+    margin-left: 5rem;
+     opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInTitle 1s ease forwards;
+    
+}
+p{
+    max-width: 900px;
+    color: white;
+    margin-left: 4rem;
+    margin-top:2rem;
+    font-size: 25px;
+     line-height: 1.6;
+    opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInPara 1s ease forwards;
+  animation-delay: 1s;
+}
+span{
+    color:  rgb(148, 148, 27);
+}
+@keyframes fadeInTitle {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInPara {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,31 @@
+.navbar{
+    background-color: black;
+}
+.navbar-nav {
+  width: 80%;
+  display: flex;
+  justify-content: space-around; 
+}
+.navbar h1{
+    color: rgb(148, 148, 27);
+    font-size: 30px;
+    font-family: 300;
+    font-family: sans-serif;
+}
+.navbar .collapse li a{
+    color:rgb(148, 148, 27);
+    
+}
+.navbar .collapse li a:hover{
+    color: yellow;
+   
+}
+.navbar .navbar-toggler {
+    border-color: rgb(148, 148, 27);
+}
+.navbar .navbar-toggler-icon{
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='yellowgreen' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+.navbar .navbar-toggler:hover .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='greenyellow' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}

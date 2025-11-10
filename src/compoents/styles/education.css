@@ -1,0 +1,137 @@
+.education-section {
+  min-height: 80vh;
+  background-color: rgb(10, 10, 10);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.education-title {
+  color: rgb(251, 251, 242);
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInTitle 1s ease forwards;
+}
+
+.education-box {
+   border: 2px solid rgb(148, 148, 27);
+  box-shadow: 0 0 20px rgb(148, 148, 27);
+  border-radius: 20px;
+  padding: 30px;
+  width: 650px;
+  text-align: center;
+  opacity: 0;
+  transform: scale(0.95);
+  animation: fadeInBox 1s ease forwards;
+}
+
+.education-box h3 {
+  color: rgb(148, 148, 27);
+  margin-bottom: 10px;
+}
+
+.education-box p {
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.education-box span {
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+/* Fade animations */
+@keyframes fadeInTitle {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInBox {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Fade transition for looping effect */
+.fade-box {
+  animation: fadeInOut 3s ease-in-out infinite;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  10% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  90% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+}
+@media (max-width: 768px) {
+  .education-section {
+    padding: 40px 15px;
+  }
+
+  .education-title {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+  }
+
+  .education-box {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .education-box h3 {
+    font-size: 1.2rem;
+  }
+
+  .education-box p,
+  .education-box span {
+    font-size: 0.9rem;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .education-title {
+    font-size: 1.6rem;
+  }
+
+  .education-box {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .education-box h3 {
+    font-size: 1rem;
+  }
+
+  .education-box p,
+  .education-box span {
+    font-size: 0.85rem;
+  }
+}

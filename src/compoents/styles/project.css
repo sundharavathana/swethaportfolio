@@ -1,0 +1,142 @@
+.projects-section {
+  min-height: 100vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+.projects-title {
+  font-size: 2.5rem;
+  color: rgb(148, 148, 27);
+  margin-bottom: 60px;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInTitle 1s ease forwards;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 80px; 
+  justify-items: center;
+  align-items: start;
+  margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr; 
+  }
+}
+
+.project-box.glass {
+  width: 500px;
+
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(148, 148, 27, 0.5);
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.project-box.glass:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 30px rgb(148, 148, 27);
+}
+
+.project-img {
+  width: 200px;
+  height: 100px;
+  margin-right:2rem;
+  border-radius: 15px;
+  object-fit: cover;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.project-box:hover .project-img {
+  transform: scale(1.05);
+}
+
+.project-box h3 {
+  color: rgb(148, 148, 27);
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+  
+ 
+}
+
+.project-box p {
+  color: #ddd;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  
+  
+}
+
+/* Animations */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInTitle {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 992px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .projects-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .project-img {
+    height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-title {
+    font-size: 1.7rem;
+  }
+
+  .project-box.glass {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .project-img {
+    height: 150px;
+  }
+
+  .project-box h3 {
+    font-size: 1rem;
+  }
+
+  .project-box p {
+    font-size: 0.85rem;
+  }
+}
