@@ -3,7 +3,8 @@ import Typed from "typed.js";
 import "./styles/home.css";
 import profile from "../assets/profile.jpeg";
 import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
-
+import {Link} from "react-router-dom"
+import "./contact.jsx" 
 
 export function Home(){
     useEffect(()=>{
@@ -36,8 +37,11 @@ export function Home(){
             
                     <h3 className="para">I’m a Python Full-Stack Developer skilled in building dynamic and user-focused web applications using Python, Django,React. I love creating scalable, efficient, and production-ready solutions from front-end to back-end.</h3>
                     <div className="btn-icon-group">
-                    <button className="btn ">resume </button>
-                    <button className="btn btn-1">connnect with me</button>
+                  <a
+              href="\swethacithabarm-resume.pdf"
+              download="swetha_Resume.pdf" className="btn"
+            >resume </a>
+                    <Link to="/Contact" className="btn btn-1">connnect with me</Link>
                     
 
 
